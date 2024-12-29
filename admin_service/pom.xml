@@ -10,7 +10,7 @@
   </parent>
   <groupId>com.nks</groupId>
   <artifactId>admin_service</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>admin_service</name>
   <description>Admin service for the application</description>
   <url/>
