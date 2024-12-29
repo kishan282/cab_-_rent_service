@@ -1,0 +1,16 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: TESTING-DBH2
+  datasource:
+    password: passwordTest
+    url: jdbc:h2:mem:testdb
+    username: admin
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  sql:
+    init:
+      mode: always
