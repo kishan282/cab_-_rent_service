@@ -1,31 +1,24 @@
 package com.nks.admin_service.adminservicedto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-public class AddRenterRequest {
-    public Date getBookingDateTime() {
-        return bookingDateTime;
-    }
+public final class AddRenterRequest {
 
     @JsonCreator
-    public AddRenterRequest(@JsonProperty("booking_date") Date bookingDateTime,
-                            @JsonProperty("car_number") String carNumber,
+    public AddRenterRequest(@JsonProperty("car_number") String carNumber,
                             @JsonProperty("is_live") boolean isLive,
-                            @JsonProperty("name") String renterName,
                             @JsonProperty("is_active") boolean isActive,
-                            @JsonProperty("phone_number") String phoneNumber,
-                            @JsonProperty("driver_licence") String driverLicense) {
-        this.bookingDateTime = bookingDateTime;
+                            @JsonProperty("driver_licence") String driverLicense,
+                            @JsonProperty("user_details") UserDetails userDetails) {
         this.carNumber = carNumber;
         this.isLive = isLive;
-        this.renterName = renterName;
         this.isActive = isActive;
-        this.phoneNumber = phoneNumber;
         this.driverLicense = driverLicense;
+        this.userDetails = userDetails;
     }
 
     public String getCarNumber() {
@@ -36,30 +29,26 @@ public class AddRenterRequest {
         return isLive;
     }
 
-    public String getRenterName() {
-        return renterName;
-    }
-
     public boolean isActive() {
         return isActive;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
     }
 
     public String getDriverLicense() {
         return driverLicense;
     }
 
-    private Date bookingDateTime; // remove
+    public UserDetails getUserDetails() {
+        return userDetails;
+    }
+
     private String carNumber;
     private boolean isLive; // ( if this request is for cab service)
     //if isLisve=true then bookingDateAndTime, pickup, drop, seats
-    private String renterName;
     private boolean isActive; //( if yes, then it will make that renter available for the day or closed and also this will make the driver be on the list of user renter search)
-    private String phoneNumber;
     private String driverLicense; // or validate licence
     // have to add driverlicence pic
+    private UserDetails userDetails;
+
+
 
 }

@@ -17,4 +17,8 @@ public class IdCreationLogicUtils {
         return name.substring(0, 3);
     }
 
+    public String renterBookingId(String name) {
+        return fetchPrefix(name).concat(String.valueOf(System.currentTimeMillis()));
+    }
+
 }
