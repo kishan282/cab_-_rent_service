@@ -1,0 +1,10 @@
+{
+  "car_number": "MH-121-2837",
+  "is_active": true,
+  "driver_licence": "6823624792",
+  "user_details": {
+    "name": "Aditya",
+    "role": "Driver",
+    "phone_number": "8839045054"
+  }
+}

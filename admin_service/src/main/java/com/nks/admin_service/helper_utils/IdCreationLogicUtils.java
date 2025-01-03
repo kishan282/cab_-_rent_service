@@ -1,4 +1,4 @@
-package com.nks.admin_service.helpre_utils;
+package com.nks.admin_service.helper_utils;
 
 import java.util.Random;
 

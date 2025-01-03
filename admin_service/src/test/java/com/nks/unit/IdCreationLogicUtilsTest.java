@@ -1,6 +1,6 @@
-package com.nks;
+package com.nks.unit;
 
-import com.nks.admin_service.helpre_utils.IdCreationLogicUtils;
+import com.nks.admin_service.helper_utils.IdCreationLogicUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

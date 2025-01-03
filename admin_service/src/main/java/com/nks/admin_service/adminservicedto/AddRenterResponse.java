@@ -2,7 +2,6 @@ package com.nks.admin_service.adminservicedto;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public final class AddRenterResponse {
 
     private final String renterInternalId;
